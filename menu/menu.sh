@@ -14,7 +14,7 @@
  clear
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/SETANTAZVPN/access/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -32,7 +32,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/access/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -49,7 +49,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/access/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -67,7 +67,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/access/main/ipmini | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini | grep $MYIP | awk '{print $3}')
 fi
 
 # // Exporting Language to UTF-8
@@ -297,33 +297,28 @@ if [[ $nginx == "running" ]]; then
 else
     status_nginx="${red}OFF${NC}"
 fi
-clear              echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                    echo -e "                            [ SCRIPT BY SETAN-VPN ]                         "
-                    echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                    echo -e " ${NC} ${white} IP VPS    ${NC}: $IPVPS"
-                    echo -e " ${NC} ${white} CPU       ${NC}: $cpu_usage"  
-                    echo -e " ${NC} ${white} RAM       ${NC}: $tram Mb"
-                    echo -e " ${NC} ${white} VERSION ${NC}: Libev 0.2"
-                    echo -e " ${NC}${whiteK}Client User       : ${NC}${MK}$Name${NC}"
-                    echo -e " ${NC}${whiteK}Xpired             : ${NC}${MK}$Exp${NC}"
-                    echo -e "\e[33m ══════════════════════════════════════════════════\033[0m"
+clear                    
+                    echo -e "${Kcyan}┌───────────────────────────────────────────┐${NC}" 
+                    echo -e "${Kcyan}│${NC} ${white} IP VPS  ${NC}: $IPVPS"
+                    echo -e "${Kcyan}│${NC} ${white} CPU     ${NC}: $cpu_usage"  
+                    echo -e "${Kcyan}│${NC} ${white} RAM     ${NC}: $tram Mb"
+                    echo -e "${Kcyan}│${NC} ${white} VERSION ${NC}: Libev 0.2"
+                    echo -e "${Kcyan}└───────────────────────────────────────────┘${NC}"  
                     echo -e " [ SSH : $status_ws_epro ] [ X-RAY : $status_ss ] [ NGINX : $status_nginx ]"
-                    echo -e "\e[33m ══════════════════════════════════════════════════\033[0m"
                     echo -e "${Kcyan}┌───────────────────────────────────────────┐${NC}"
                     echo -e "${Kcyan}│${MK} SSH : $ssh1 │ VMES : $vma │ VLES : $vla │ TROJAN : $tra"${Kcyan}│${NC}
                     echo -e "${Kcyan}└───────────────────────────────────────────┘${NC}"
-                    echo -e "\e[33m ══════════════════════════════════════════════════\033[0m"
-                    echo -e "                      	• SCRIPT MENU •                                      "
-                    echo -e "\e[33m ══════════════════════════════════════════════════\033[0m"
-                    echo -e "${Kcyan} ${NC}${Kbiru} [•1]${NC}📨 ${white} SSH${NC}        " "${Kbiru}[•6]${NC}📨 ${white} CHECK RUNNING${NC}"   "${Kcyan}│${NC}"
-                    echo -e "${Kcyan} ${NC}${Kbiru} [•2]${NC}📨 ${white} VMESS${NC}      " "${Kbiru}[•7]${NC}📨 ${white} RESTR SERVICE${NC}"   "${Kcyan}│${NC}"  
-                    echo -e "${Kcyan} ${NC}${Kbiru} [•3]${NC}📨 ${white} VLESS${NC}      " "${Kbiru}[•8]${NC}📨 ${white} BACKUP MENU${NC}  "   "${Kcyan}│${NC}"
-                    echo -e "${Kcyan} ${NC}${Kbiru} [•4]${NC}📨 ${white} TROJAN-GO${NC}  " "${Kbiru}[•9]${NC}📨 ${white} SET PASW VPS${NC} "   "${Kcyan}│${NC}"
-                    echo -e "${Kcyan} ${NC}${Kbiru} [•5]${NC}📨 ${white} TROJAN-WS${NC}  " "${Kbiru}[10]${NC}📨 ${white} MENU SETINGS${NC} "   "${Kcyan}│${NC}"
-                    echo -e "\e[33m ══════════════════════════════════════════════════\033[0m"
-                    echo -e "	     SC BY SETAN VPN, JOIN MY GRUP https://t.me/TazVPN                      "
-                    echo -e "\e[33m ══════════════════════════════════════════════════\033[0m"
-
+                    echo -e "${Kcyan}┌───────────────────────────────────────────┐${NC}"
+                    echo -e "${Kcyan}│${NC}${whiteK}              Client : ${NC}${MK}$Name${NC}"
+                    echo -e "${Kcyan}│${NC}${whiteK}              Xpired : ${NC}${MK}$Exp${NC}"
+                    echo -e "${Kcyan}└───────────────────────────────────────────┘${NC}"
+                    echo -e "${Kcyan}┌───────────────────────────────────────────┐"
+                    echo -e "${Kcyan}│${NC}${Kbiru} [•1]${NC}📨 ${white} SSH${NC}        " "${Kbiru}[•6]${NC}📨 ${white} CHECK RUNNING${NC}"   "${Kcyan}│${NC}"
+                    echo -e "${Kcyan}│${NC}${Kbiru} [•2]${NC}📨 ${white} VMESS${NC}      " "${Kbiru}[•7]${NC}📨 ${white} RESTR SERVICE${NC}"   "${Kcyan}│${NC}"  
+                    echo -e "${Kcyan}│${NC}${Kbiru} [•3]${NC}📨 ${white} VLESS${NC}      " "${Kbiru}[•8]${NC}📨 ${white} BACKUP MENU${NC}  "   "${Kcyan}│${NC}"
+                    echo -e "${Kcyan}│${NC}${Kbiru} [•4]${NC}📨 ${white} TROJAN-GO${NC}  " "${Kbiru}[•9]${NC}📨 ${white} SET PASW VPS${NC} "   "${Kcyan}│${NC}"
+                    echo -e "${Kcyan}│${NC}${Kbiru} [•5]${NC}📨 ${white} TROJAN-WS${NC}  " "${Kbiru}[10]${NC}📨 ${white} MENU SETINGS${NC} "   "${Kcyan}│${NC}"
+                    echo -e "${Kcyan}└───────────────────────────────────────────┘"    
 echo -e ""
 echo -e   "${kuning}"
 read -p " >>>>  "  opt
