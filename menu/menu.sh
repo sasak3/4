@@ -234,8 +234,10 @@ export sem=$( curl -s https://raw.githubusercontent.com/artanodrop/permission/ma
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
+echo -e ""
+echo -e ""
 echo -e "                 ${BICyan}Premium Script : ${BIPurple}SETAN-VPN${NC}"
-echo -e "                   ${BICyan} SCRIPT MULTI VER.3 STABILE ${NC}"
+echo -e "              ${BICyan} SCRIPT MULTI VER.3 STABILE ${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Informations${NC}"
 echo -e "${BICyan} │====================================================="
@@ -248,11 +250,11 @@ echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $res
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                      OTHER MENU                     │ ${NC}" 
 echo -e "${BICyan} │=====================================================│"
-echo -e "${BICyan} │${NC}${BICyan} [•1]${NC}📨 ${white} SSH${NC}        " "${BICyan}[•7]${NC}📨 ${white} CHECK RUNNING${NC}"
-echo -e "${BICyan} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}      " "${BICyan}[•8]${NC}📨 ${white} RESTR SERVICE${NC}"           
-echo -e "${BICyan} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}      " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
-echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}  " "${BICyan}[10]${NC}📨 ${white} SET PASW VPS${NC} "                 
-echo -e "${BICyan} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}  " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
+echo -e "${BICyan} │${NC}${BICyan} [•1]${NC}📨 ${white} SSH${NC}          " "${BICyan}[•7]${NC}📨 ${white} CHECK RUNNING${NC}"
+echo -e "${BICyan} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}        " "${BICyan}[•8]${NC}📨 ${white} RESTR SERVICE${NC}"           
+echo -e "${BICyan} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}        " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
+echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}    " "${BICyan}[10]${NC}📨 ${white} SET PASW VPS${NC} "                 
+echo -e "${BICyan} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}    " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
 echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} Update Service${NC} "   
 echo -e "${BICyan} └──────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
