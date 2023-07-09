@@ -53,7 +53,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/artanodrop/permission/main/ipmini | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
@@ -241,7 +241,7 @@ echo -e "                 ${BICyan}Decodec     :${BIPurple} @Andyyuda${NC}"
 echo -e "               ${BICyan}${On_IPurple} SCRIPT MULTI VER.3 STABILE ${UWhite}${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Informations${NC}"
-echo -e "${BICyan} │==========================================================================="
+echo -e "${BICyan} │====================================================="
 echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}XRAY${NC}"
 echo -e " ${BICyan}│  ${BICyan}Current Domain  :  ${BIPurple}$(cat /etc/xray/domain)${NC}"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
@@ -249,14 +249,13 @@ echo -e " ${BICyan}└───────────────────�
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "     ${BICyan}[${BIWhite}01${BICyan}] OTHER MENU ${NC}" 
+echo -e "     ${BICyan}                 OTHER MENU                        ${NC}" 
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
-echo -e "     ${BICyan}[${BIWhite}01${BICyan}] SSH     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"    "     ${BICyan}[${BIWhite}06${BICyan}] Running Service    ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}   │"
-echo -e "     ${BICyan}[${BIWhite}02${BICyan}] VMESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "     ${BICyan}[${BIWhite}07${BICyan}] BACKUP    ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}   │"
-echo -e "     ${BICyan}[${BIWhite}03${BICyan}] VLESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "     ${BICyan}[${BIWhite}08${BICyan}] restart service      ${NC}" "${BICyan}     │"
-echo -e "     ${BICyan}[${BIWhite}04${BICyan}] TROJAN  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "     ${BICyan}[${BIWhite}09${BICyan}] GEN SSL             │"
-echo -e "     ${BICyan}[${BIWhite}05${BICyan}] SETTING ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "     ${BICyan}[${BIWhite}10${BICyan}] SSH-UDP${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}   │${NC}"
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "${Kcyan}${NC}${Kbiru} [•1]${NC}📨 ${white} SSH${NC}        " "${Kbiru}[•6]${NC}📨 ${white} CHECK RUNNING${NC}"   "${Kcyan}│${NC}"
+echo -e "${Kcyan}${NC}${Kbiru} [•2]${NC}📨 ${white} VMESS${NC}      " "${Kbiru}[•7]${NC}📨 ${white} RESTR SERVICE${NC}"   "${Kcyan}│${NC}"  
+echo -e "${Kcyan}${NC}${Kbiru} [•3]${NC}📨 ${white} VLESS${NC}      " "${Kbiru}[•8]${NC}📨 ${white} BACKUP MENU${NC}  "   "${Kcyan}│${NC}"
+echo -e "${Kcyan}${NC}${Kbiru} [•4]${NC}📨 ${white} TROJAN-GO${NC}  " "${Kbiru}[•9]${NC}📨 ${white} SET PASW VPS${NC} "   "${Kcyan}│${NC}"
+echo -e "${Kcyan}${NC}${Kbiru} [•5]${NC}📨 ${white} TROJAN-WS${NC}  " "${Kbiru}[10]${NC}📨 ${white} MENU SETINGS${NC} "   "${Kcyan}│${NC}"    echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
 echo -e "${BICyan} │  \033[0m ${Blue}     $ssh1         $vma           $vla           $tra              $NC"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
