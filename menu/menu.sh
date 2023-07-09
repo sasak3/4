@@ -271,17 +271,16 @@ echo
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-1) clear ; menu-ssh ;;
+1) clear ; menu-sshh ;;
 2) clear ; menu-vmess ;;
 3) clear ; menu-vless ;;
-4) clear ; menu-trojan ;;
-5) clear ; menu-set ;;
+4) clear ; menu-trgo ;;
+5) clear ; menu-trojan ;;
 6) clear ; status ;;
-7) clear ; menu-bckp ;;
-8) clear ; restart ;;
-9) clear ; certv2ray ;;
-10) clear ; clear ; udp ;;
-6969) clear ; wget https://raw.githubusercontent.com/artanodrop/v4/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
+7) clear ; restarts ;;
+8) clear ; menu-backup ;;
+9) clear ; passwd ;;
+10) clear ; menu-set ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
