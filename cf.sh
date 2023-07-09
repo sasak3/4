@@ -7,8 +7,8 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 apt install jq curl -y
 sub=$(</dev/urandom tr -dc a-z | head -c4)
-DOMAIN=tazcoeg.eu.org
-SUB_DOMAIN=${sub}vip.tazcoeg.eu.org
+DOMAIN=stvpn.app
+SUB_DOMAIN=${sub}vip.stvpn.app
 CF_ID=tazzpyns@gmail.com
 CF_KEY=1ff2e2bfc5f3341e1e7a70ed2c1a333841a8b
 set -euo pipefail
