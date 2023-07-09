@@ -248,11 +248,12 @@ echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $res
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                      OTHER MENU                     │ ${NC}" 
 echo -e "${BICyan} │=====================================================│"
-echo -e "${BICyan} │${NC}${BICyan} [•1]${NC}📨 ${white} SSH${NC}        " "${BICyan}[•6]${NC}📨 ${white} CHECK RUNNING${NC}"
-echo -e "${BICyan} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}      " "${BICyan}[•7]${NC}📨 ${white} RESTR SERVICE${NC}"           
-echo -e "${BICyan} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}      " "${BICyan}[•8]${NC}📨 ${white} BACKUP MENU${NC}  "                   
-echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}  " "${BICyan}[•9]${NC}📨 ${white} SET PASW VPS${NC} "                 
-echo -e "${BICyan} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}  " "${BICyan}[10]${NC}📨 ${white} MENU SETINGS${NC} "                
+echo -e "${BICyan} │${NC}${BICyan} [•1]${NC}📨 ${white} SSH${NC}        " "${BICyan}[•7]${NC}📨 ${white} CHECK RUNNING${NC}"
+echo -e "${BICyan} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}      " "${BICyan}[•8]${NC}📨 ${white} RESTR SERVICE${NC}"           
+echo -e "${BICyan} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}      " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
+echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}  " "${BICyan}[10]${NC}📨 ${white} SET PASW VPS${NC} "                 
+echo -e "${BICyan} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}  " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
+echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} Update Service${NC} "   
 echo -e "${BICyan} └──────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
@@ -275,11 +276,13 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trgo ;;
 5) clear ; menu-trojan ;;
-6) clear ; status ;;
-7) clear ; restarts ;;
-8) clear ; menu-backup ;;
-9) clear ; passwd ;;
-10) clear ; menu-set ;;
+6) clear ; wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/update.sh && chmod +x update.sh && ./update.sh ;;
+7) clear ; status ;;
+8) clear ; restarts ;;
+9) clear ; menu-backup ;;
+10) clear ; passwd ;;
+11) clear ; menu-set ;;
+12) clear ;  wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh && chmod +x up.sh && ./up.sh  ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
