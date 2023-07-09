@@ -141,8 +141,9 @@ yellow "Add Domain for vmess/vless/trojan dll"
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
-echo "1. Use Domain tazcoeg.eu.org"
-echo "2. Use Your Private Domain"
+echo "1. Use Domain Script 01"
+echo "2. Use Domain Script 02"
+echo "2. Use Private Domain "
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 echo -e""
 read -rp "Choose Your Domain Installation : " dom 
@@ -152,11 +153,11 @@ clear
 wget -q -O /root/cf.sh "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/cf.sh"
 chmod +x /root/cf.sh
 ./cf.sh
-elif test $dom -eq 3; then
+elif test $dom -eq 2; then
 wget -q -O /root/cf1.sh "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/cf1.sh"
 chmod +x /root/cf1.sh
 ./cf1.sh
-elif test $dom -eq 2; then
+elif test $dom -eq 3; then
 read -rp "Domain/Host: " -e host
 echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
  "IP=$host" >> /etc/xray/domain
