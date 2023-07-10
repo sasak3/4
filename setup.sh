@@ -191,13 +191,13 @@ wget https://raw.githubusercontent.com/artanodrop/v4/main/xray/ins-xray.sh && ch
 wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/Sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 #pasang rc clone ssh ovpn 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "$green      Memasang backup server              $NC" 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-sleep 2 
-clear 
-wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh 
-clear
+### Pasang Rclone
+function pasang_backup() {
+    judge "Memasang backup server"
+    wget https://raw.githubusercontent.com/artanodrop/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
+    print_success "backup server"
+}
+
 #Instal slowdns
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SLDNS              $NC"
