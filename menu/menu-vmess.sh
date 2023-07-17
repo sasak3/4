@@ -86,22 +86,27 @@ echo -e "\E[0;100;33m       • XRAY / VMESS MENU •         \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e "        ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
-echo -e "        ${white}[•2]${NC} ${cyan}Create trial${NC}"
-echo -e "        ${white}[•3]${NC} ${cyan}Xtendd V2ray${NC}"
-echo -e "        ${white}[•4]${NC} ${cyan}Delete V2ray${NC}"
-echo -e "        ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
+#echo -e "        ${white}[•2]${NC} ${cyan}Create trial${NC}"
+echo -e "        ${white}[•2]${NC} ${cyan}Xtendd V2ray${NC}"
+echo -e "        ${white}[•3]${NC} ${cyan}Delete V2ray${NC}"
+echo -e "        ${white}[•4]${NC} ${cyan}Cek User Login${NC}"
 echo -e "        ${yelow}[•0]${NC} ${yelow}Back To Menu${NC}"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${yelow}"
 read -p "  >>>   "  opt
 echo -e ""
 case $opt in
-1) clear ; add-ws ; exit ;;
-2) clear ; trialvmess ; exit ;;
-3) clear ; renew-ws ; exit ;;
-4) clear ; del-ws ; exit ;;
-5) clear ; cek-ws ; exit ;;
-0) clear ; menu ; exit ;;
+#1) clear ; add-ws ; exit ;;
+#2) clear ; trialvmess ; exit ;;
+#3) clear ; renew-ws ; exit ;;
+#4) clear ; del-ws ; exit ;;
+#5) clear ; cek-ws ; exit ;;
+#0) clear ; menu ; exit ;;
+01 | 1) clear ; addvmess ;;
+02 | 2) clear ; renewvmess ;;
+03 | 3) clear ; delvmess ;;
+04 | 4) clear ; cekvmess ;;
+00 | 0) clear ; menu ;;
 x) exit ;;
 *) echo "Salah pencet" ; menu-ssh ;;
 esac
