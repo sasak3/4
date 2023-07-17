@@ -285,7 +285,7 @@ case $opt in
 10) clear ; passwd ;;
 11) clear ; menu-set ;;
 12) clear ;  wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh && chmod +x up.sh && ./up.sh  ;;
-0) clear ; menu ;;
+00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
 esac
