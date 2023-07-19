@@ -81,30 +81,27 @@ exit 0
 fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear 
-echo -e ""
-echo -e "   ${red_background}TROJAN-WS MENU${NC}"
-echo -e ""
+echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "                      << TROJAN-WS MENU >>                    \E[0m" | lolcat
+echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
+echo -e " "
 echo -e "        ${white}[•1]${NC} ${cyan}Create Trojan${NC}"
-#echo -e "        ${white}[•2]${NC} ${cyan}Create Trial${NC}"
+echo -e "        ${white}[•2]${NC} ${cyan}Create Trial${NC}"
 echo -e "        ${white}[•2]${NC} ${cyan}Xtend account${NC}"
 echo -e "        ${white}[•3]${NC} ${cyan}Delet account${NC}"
 echo -e "        ${white}[•4]${NC} ${cyan}Cek user${NC}"
 echo -e "        ${yelow}[•0]${NC} ${yelow}Back To Menu${NC}"
+echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${yelow}"
 read -p " >>>   " opt
 echo -e ""
 case $opt in
-#1) clear ; add-tr ;;
-#2) clear ; trialtrojan ;;
-#3) clear ; renew-tr ;;
-#4) clear ; del-tr ;;
-#5) clear ; cek-tr ;;
-#0) clear ; menu ;;
-01 | 1) clear ; addtrojan ;;
-02 | 2) clear ; renewtrojan ;;
-03 | 3) clear ; deltrojan ;;
-04 | 4) clear ; cektrojan ;;
-00 | 0) clear ; menu ;;
+1) clear ; add-tr ;;
+2) clear ; trialtrojan ;;
+3) clear ; renew-tr ;;
+4) clear ; del-tr ;;
+5) clear ; cek-tr ;;
+0) clear ; menu ;;
 x) exit ;;
 *) echo "Boh salah tekan, Sayang kedak Babi" ; sleep 1 ; menu-trojan ;;
 esac
