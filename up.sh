@@ -49,6 +49,7 @@ rm -rf backup
 rm -rf restore
 rm -rf jam
 rm -rf up
+rm -rf bot
 
 # download script
 cd /usr/bin
@@ -88,6 +89,7 @@ wget -O about "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/about.s
 wget -O auto-reboot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/auto-reboot.sh"
 wget -O restarts "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/bw.sh"
+wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/bot.sh"
 
 # change port
 wget -O port-ssl "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/port/port-ssl.sh"
@@ -141,6 +143,7 @@ chmod +x about
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
+chmod +x bot
 
 chmod +x port-ssl
 chmod +x port-ovpn
