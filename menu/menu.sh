@@ -22,6 +22,7 @@ checking_sc() {
     fi
 }
 checking_sc
+Name=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
@@ -238,7 +239,7 @@ echo -e "${BICyan} └───────────────────�
 echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e " ${BICyan}│  Version      ${NC} : Ver3. Last Update"
 echo -e " ${BICyan}│  User       ${NC}   :\033[1;36m $Name \e[0m"
-echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$Exp${NC} Days"
+echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$useexp${NC} Days"
 echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
