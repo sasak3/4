@@ -255,7 +255,7 @@ echo -e "${BICyan} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}        
 echo -e "${BICyan} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}        " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
 echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}    " "${BICyan}[10]${NC}📨 ${white} SET PASW VPS${NC} "                 
 echo -e "${BICyan} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}    " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
-echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} Update Service${NC} "   
+echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} MENU BOT${NC} "   
 echo -e "${BICyan} └──────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
@@ -284,7 +284,7 @@ case $opt in
 9) clear ; menu-backup ;;
 10) clear ; passwd ;;
 11) clear ; menu-set ;;
-12) clear ;  wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh && chmod +x up.sh && ./up.sh  ;;
+12) clear ; bot ;;
 00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
