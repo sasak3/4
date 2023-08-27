@@ -1,4 +1,9 @@
 domain=$(cat /etc/xray/domain)
+TIMES="10"
+CHATID=$(cat /etc/id)
+KEY=$(cat /etc/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
@@ -65,6 +70,36 @@ systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
 
+TEXT="
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>  Premium Vmess Account</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Remarks      : </code> <code>${user}</code>
+<code>Domain       : </code> <code>${domain}</code>
+<code>Port TLS     : </code> <code>443</code>
+<code>Port NTLS    : </code> <code>80, 8080</code>
+<code>Port GRPC    : </code> <code>443</code>
+<code>User ID      : </code> <code>${uuid}</code>
+<code>AlterId      : 0</code>
+<code>Security     : auto</code>
+<code>Network      : WS or gRPC</code>
+<code>Path         : </code> <code>/vmess</code>
+<code>ServiceName  : </code> <code>vmess-grpc</code>
+<code>Expired On   : $exp</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link TLS     :</code> 
+<code>${vmesslink1}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link NTLS    :</code> 
+<code>${vmesslink2}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link GRPC    :</code> 
+<code>${vmesslink3}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+"
+fi
+
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[40;1;37m       Trial Xray/Vmess      \E[0m"
