@@ -632,6 +632,8 @@ wget -O deltrgo "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/xray/delt
 wget -O renewtrgo "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/xray/renewtrgo.sh" && chmod +x renewtrgo
 wget -O cektrgo "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/xray/cektrgo.sh" && chmod +x cektrgo
 
+# bot panell
+wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh" && chmod +x /usr/bin/bot
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
