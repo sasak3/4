@@ -16,7 +16,7 @@ checking_sc() {
         echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
         echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
         echo -e "             \033[0;33mContact Your Admin \033[0m"
-       # echo -e "     \033[0;36mTelegram\033[0m: https://t.me/CasperGaming"
+        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/Tazpin"
         echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
         exit
     fi
@@ -225,9 +225,9 @@ echo -e "${BICyan} │=====================================================│"
 echo -e "${BICyan} │${NC}${BICyan} [•1]${NC}📨 ${white} SSH${NC}          " "${BICyan}[•7]${NC}📨 ${white} CHECK RUNNING${NC}"
 echo -e "${BICyan} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}        " "${BICyan}[•8]${NC}📨 ${white} RESTR SERVICE${NC}"           
 echo -e "${BICyan} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}        " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
-echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}    " "${BICyan}[10]${NC}📨 ${white} SET PASW VPS${NC} "                 
+echo -e "${BICyan} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}    " "${BICyan}[10]${NC}📨 ${white} INSTALL BOT VPS${NC} "                 
 echo -e "${BICyan} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}    " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
-echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} MENU BOT${NC} "   
+echo -e "${BICyan} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} SETTING BOT${NC} "   
 echo -e "${BICyan} └──────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
@@ -254,7 +254,7 @@ case $opt in
 7) clear ; status ;;
 8) clear ; restarts ;;
 9) clear ; menu-backup ;;
-10) clear ; passwd ;;
+10) clear ; wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
 11) clear ; menu-set ;;
 12) clear ; bot ;;
 00) clear ; menu ;;
