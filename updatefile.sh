@@ -49,7 +49,7 @@ rm -rf backup
 rm -rf restore
 rm -rf jam
 rm -rf up
-rm -rf bot
+#rm -rf bot
 
 # download script
 cd /usr/bin
@@ -89,7 +89,6 @@ wget -O about "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/about.s
 wget -O auto-reboot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/auto-reboot.sh"
 wget -O restarts "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/bw.sh"
-wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh"
 
 # change port
 wget -O port-ssl "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/port/port-ssl.sh"
@@ -109,6 +108,9 @@ wget -O /usr/bin/up "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh
 wget -O jam "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/jam.sh"
 wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/udp/udp.sh && bash udp.sh
 wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+
+#install Bot panel
+wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh" && chmod +x /usr/bin/bot
 
 chmod +x menu
 chmod +x menu-trial
@@ -142,7 +144,6 @@ chmod +x about
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
-chmod +x bot
 
 chmod +x port-ssl
 chmod +x port-ovpn
