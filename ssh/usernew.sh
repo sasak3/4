@@ -76,11 +76,6 @@ TEXT="
 <code>Port SSH WS     : </code> <code>80, 8080</code>
 <code>Port SSH SSL WS : </code> <code>443</code>
 <code>Port SSL/TLS     : </code> <code>8443,8880</code>
-<code>Port OVPN WS SSL : </code> <code>2086</code>
-<code>Port OVPN SSL    : </code> <code>990</code>
-<code>Port OVPN TCP    : </code> <code>1194</code>
-<code>Port OVPN UDP    : </code> <code>2200</code>
-<code>Proxy Squid        : </code> <code>3128</code>
 <code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
 <code>◇━━━━━━━━━━━━━━━━━◇</code>
 <code>SSH UDP VIRAL :</code> <code>$domen:1-65535@$Login:$Pass</code>
