@@ -8,6 +8,11 @@ clear
 sldomain=$(cat /root/nsdomain)
 cdndomain=$(cat /root/awscdndomain)
 slkey=$(cat /etc/slowdns/server.pub)
+TIMES="10"
+CHATID=$(cat /etc/id)
+KEY=$(cat /etc/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+
 clear
 
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
@@ -57,6 +62,43 @@ exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 clear
+TEXT="
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>  SSH Premium Account   </code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Username        : </code> <code>$Login</code>
+<code>Password        : </code> <code>$Pass</code>
+<code>Expired          : </code> <code>$exp</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>IP               : </code> <code>$IP</code>
+<code>Port OpenSSH    : </code> <code>22</code>
+<code>Port Dropbear    : </code> <code>109, 143</code>
+<code>Port SSH WS     : </code> <code>80, 8080</code>
+<code>Port SSH SSL WS : </code> <code>443</code>
+<code>Port SSL/TLS     : </code> <code>8443,8880</code>
+<code>Port OVPN WS SSL : </code> <code>2086</code>
+<code>Port OVPN SSL    : </code> <code>990</code>
+<code>Port OVPN TCP    : </code> <code>1194</code>
+<code>Port OVPN UDP    : </code> <code>2200</code>
+<code>Proxy Squid        : </code> <code>3128</code>
+<code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>SSH UDP VIRAL :</code> <code>$domen:1-65535@$Login:$Pass</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>HTTP COSTUM :</code> <code>$domen:80@$Login:$Pass</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Host Slowdns    : </code> <code>$sldomain</code>
+<code>Port Slowdns     : </code> <code>80, 443, 53</code> 
+<code>Pub Key          : </code> <code> $slkey</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Payload WS/WSS   : </code>
+<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+"
+
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+
+
 if [[ ! -z "${PID}" ]]; then
 echo -e "\e[1;36m__________________________________________\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\E[40;1;37m        𝗔𝗖𝗖𝗢𝗨𝗡𝗧            \E[0m" | tee -a /etc/log-create-user.log
