@@ -24,10 +24,10 @@ figlet "Backup"
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
 rm -rf /root/backup
 mkdir /root/backup
-cp /etc/passwd backup/
-cp /etc/group backup/
-cp /etc/shadow backup/
-cp /etc/gshadow backup/
+cp -r /etc/passwd backup/
+cp -r /etc/group backup/
+cp -r /etc/shadow backup/
+cp -r /etc/gshadow backup/
 cp -r /etc/xray backup/xray
 cp -r /root/nsdomain backup/nsdomain
 cp -r /etc/slowdns backup/slowdns
