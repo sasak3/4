@@ -322,6 +322,7 @@ wget -O status "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/status.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/menu-backup.sh"
 wget -O backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/restore.sh"
+wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh"
 
 wget -O jam "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/jam.sh"
 wget -O up "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh"
@@ -336,6 +337,7 @@ chmod +x menu-trgo
 chmod +x menu-trojan
 chmod +x user-lock
 chmod +x user-unlock
+chmod +x bot
 
 chmod +x menu-sshh
 chmod +x usernew
