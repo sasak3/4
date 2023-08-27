@@ -278,7 +278,7 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trgo ;;
 5) clear ; menu-trojan ;;
-6) clear ; wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/update.sh && chmod +x update.sh && ./update.sh ;;
+6) clear ; wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh && chmod +x up.sh && ./up.sh ;;
 7) clear ; status ;;
 8) clear ; restarts ;;
 9) clear ; menu-backup ;;
