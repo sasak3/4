@@ -13,17 +13,12 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 clear
+token=$(cat /etc/token)
+id_chat=$(cat /etc/id)
+domain=$(cat /etc/xray/domain)
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
-clear
-email=$(cat /home/email)
-if [[ "$email" = "" ]]; then
-echo "Masukkan Email Untuk Menerima Backup"
-read -rp "Email : " -e email
-cat <<EOF>>/home/email
-$email
-EOF
-fi
+time=$(date +'%H:%M:%S')
 clear
 figlet "Backup"
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
@@ -43,6 +38,15 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
+
+curl -F chat_id="$id_chat" -F document=@"$IP.zip" -F caption="Thank You For Using this Script
+Domain : $domain
+IP VPS : $IP
+Date   : $date
+Time   : $time WIB
+Link Google : $link" https://api.telegram.org/bot$token/sendDocument &> /dev/null
+
+
 echo -e "
 Detail Backup 
 ==================================
@@ -62,4 +66,4 @@ Link Backup   : $link
 Tanggal       : $date
 ==================================
 "
-echo "Silahkan cek Kotak Masuk $email"
+echo "Silahkan disave link diatas"
