@@ -284,7 +284,7 @@ case $opt in
 9) clear ; menu-backup ;;
 10) clear ; passwd ;;
 11) clear ; menu-set ;;
-12) clear ; bot ;;
+12) clear ; wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh && chmod +x bot.sh && ./bot.sh ;;
 00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
