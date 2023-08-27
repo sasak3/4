@@ -89,7 +89,7 @@ wget -O about "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/about.s
 wget -O auto-reboot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/auto-reboot.sh"
 wget -O restarts "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/bw.sh"
-wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/bot.sh"
+wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh"
 
 # change port
 wget -O port-ssl "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/port/port-ssl.sh"
