@@ -102,10 +102,10 @@ wget -O acs-set "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/acs-set.s
 wget -O sshws "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/status.sh"
 wget https://raw.githubusercontent.com/Andyyuda/ver3/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
-wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
-wget -q -O /usr/bin/up "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh" && chmod +x /usr/bin/up
+wget -O /usr/bin/menu "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -O /usr/bin/backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
+wget -O /usr/bin/restore "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
+wget -O /usr/bin/up "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh" && chmod +x /usr/bin/up
 wget -O jam "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/jam.sh"
 wget https://raw.githubusercontent.com/SETANTAZVPN/v4/main/udp/udp.sh && bash udp.sh
 wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
