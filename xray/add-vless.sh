@@ -3,6 +3,10 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
+TIMES="10"
+CHATID=$(cat /etc/id)
+KEY=$(cat /etc/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 
 clear
@@ -47,6 +51,41 @@ vlesslink2="vless://${uuid}@${domain}:$none?path=/vless&encryption=none&type=ws#
 vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 systemctl restart xray
 clear
+vless1="$(echo $vlesslink1 | base64 -w 0)"
+vless2="$(echo $vlesslink2 | base64 -w 0)"
+vless3="$(echo $vlesslink3 | base64 -w 0)"
+
+TEXT="
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>  Premium Vless Account</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Remarks      : </code> <code>${user}</code>
+<code>Domain       : </code> <code>${domain}</code>
+<code>Port TLS     : 443</code>
+<code>Port NTLS    : 80, 8080</code>
+<code>Port GRPC    : 443</code>
+<code>User ID      : </code> <code>${uuid}</code>
+<code>AlterId      : 0</code>
+<code>Security     : auto</code>
+<code>Network      : WS or gRPC</code>
+<code>Path vless   : </code> <code>/vless</code>
+<code>ServiceName  : </code> <code>/vless-grpc</code>
+<code>Expired On : </code> <code>$timer Minutes</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link TLS     :</code> 
+<code>${vless1}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link NTLS    :</code> 
+<code>${vless2}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link GRPC    :</code> 
+<code>${vless3}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+"
+
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+
+
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\E[40;1;37m        Xray/Vless Account        \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
