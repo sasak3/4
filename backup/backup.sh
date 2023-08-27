@@ -24,14 +24,14 @@ figlet "Backup"
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
 rm -rf /root/backup
 mkdir /root/backup
-cp -r /etc/passwd /root/backup/
-cp -r /etc/group /root/backup/
-cp -r /etc/shadow /root/backup/
-cp -r /etc/gshadow /root/backup/
-cp -r /etc/xray /root/backup/xray
-cp -r /root/nsdomain /root/backup/nsdomain
-cp -r /etc/slowdns /root/backup/slowdns
-cp -r /home/vps/public_html /root/backup/public_html
+cp -r /etc/passwd /root/backup/ &> /dev/null
+cp -r /etc/group /root/backup/ &> /dev/null
+cp -r /etc/shadow /root/backup/ &> /dev/null
+cp -r /etc/gshadow /root/backup/ &> /dev/null
+cp -r /etc/xray /root/backup/xray &> /dev/null
+cp -r /root/nsdomain /root/backup/nsdomain &> /dev/null
+cp -r /etc/slowdns /root/backup/slowdns &> /dev/null
+cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cd /root
 zip -r $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
