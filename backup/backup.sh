@@ -39,7 +39,7 @@ url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 
-curl -F chat_id="$id_chat" -F document=@"$IP.zip" -F caption="Thank You For Using this Script
+curl -F chat_id="$id_chat" -F document=@"$IP-$date.zip" -F caption="Thank You For Using this Script
 Domain : $domain
 IP VPS : $IP
 Date   : $date
