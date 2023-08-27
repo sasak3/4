@@ -28,7 +28,7 @@ cp -r /etc/passwd /backup/
 cp -r /etc/group /backup/
 cp -r /etc/shadow /backup/
 cp -r /etc/gshadow /backup/
-cp -r /etc/xray backup/xray
+cp -r /etc/xray /backup/xray
 cp -r /root/nsdomain /backup/nsdomain
 cp -r /etc/slowdns /backup/slowdns
 cp -r /home/vps/public_html /backup/public_html
