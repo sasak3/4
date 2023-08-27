@@ -3,7 +3,10 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
-
+TIMES="10"
+CHATID=$(cat /etc/id)
+KEY=$(cat /etc/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 clear
 source /var/lib/SIJA/ipvps.conf
@@ -98,6 +101,38 @@ vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
+
+TEXT="
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>  Premium Vmess Account</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Remarks      : </code> <code>${user}</code>
+<code>Domain       : </code> <code>${domain}</code>
+<code>Port TLS     : </code> <code>443</code>
+<code>Port NTLS    : </code> <code>80, 8080</code>
+<code>Port GRPC    : </code> <code>443</code>
+<code>User ID      : </code> <code>${uuid}</code>
+<code>AlterId      : 0</code>
+<code>Security     : auto</code>
+<code>Network      : WS or gRPC</code>
+<code>Path         : </code> <code>/vmess</code>
+<code>ServiceName  : </code> <code>vmess-grpc</code>
+<code>Expired On   : $exp</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link TLS     :</code> 
+<code>${vmesslink1}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link NTLS    :</code> 
+<code>${vmesslink2}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link GRPC    :</code> 
+<code>${vmesslink3}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+"
+fi
+
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\\E[40;1;37m        Xray/Vmess Account        \E[0m" | tee -a /etc/log-create-user.log
