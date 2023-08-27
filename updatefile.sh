@@ -66,7 +66,7 @@ wget -O menu-trojan "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/menu-sshh.sh"
-wget -O usernew "https://raw.githubusercontent.com/SETANTAZVPNl/v4/main/ssh/usernew.sh"
+wget -O usernew "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/trial.sh"
 wget -O renew "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/renew.sh"
 wget -O hapus "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/hapus.sh"
