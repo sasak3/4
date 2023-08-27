@@ -16,6 +16,8 @@ wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/menu-backup.sh" && chmod +x /usr/bin/menu-backup
 wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
 wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
+cd /usr/bin
+wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh" chmod +x /usr/bin/bot
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit
