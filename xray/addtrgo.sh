@@ -13,6 +13,11 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 
+TIMES="10"
+CHATID=$(cat /etc/id)
+KEY=$(cat /etc/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+
 clear
 uuid=$(cat /etc/trojan-go/uuid.txt)
 source /var/lib/SIJA/ipvps.conf
@@ -42,6 +47,36 @@ systemctl restart trojan-go.service
 link="trojan-go://${uuid}@isi_bug_disini:${trgo}/?sni=${domain}&type=ws&host=${domain}&path=%2Ftrojango#$user"
 link1="trojan://${uuid}@isi_bug_disini:${trgo}/?sni=${domain}&type=ws&host=${domain}&path=%2Ftrojango#$user"
 clear
+
+trojan1="$(echo $link1 | base64 -w 0)"
+trojan2="$(echo $link | base64 -w 0)"
+
+TEXT="
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>  Premium Trojan GO Account</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Remarks      : </code> <code>${user}</code>
+<code>Domain       : </code> <code>${domain}</code>
+<code>Port TLS     : </code> <code>443</code>
+<code>Port GRPC    : </code> <code>443</code>
+<code>User ID      : </code> <code>${uuid}</code>
+<code>AlterId      : 0</code>
+<code>Security     : auto</code>
+<code>Network      : WS or gRPC</code>
+<code>Path    : </code> <code>/trojango</code>
+<code>Expired On : $exp</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link TRGO V2RAYNG    :</code> 
+<code>${trojan2}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Link TRGO    :</code> 
+<code>${trojan1}</code>
+<code>◇━━━━━━━━━━━━━━━━━◇</code>
+"
+
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+
+
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\E[40;1;37m          TROJAN GO          \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
