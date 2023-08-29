@@ -56,9 +56,9 @@ vless2="$(echo $vlesslink2 | base64 -w 0)"
 vless3="$(echo $vlesslink3 | base64 -w 0)"
 
 TEXT="
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>  Premium Vless Account</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
 <code>Port TLS     : 443</code>
@@ -70,17 +70,18 @@ TEXT="
 <code>Network      : WS or gRPC</code>
 <code>Path vless   : </code> <code>/vless</code>
 <code>ServiceName  : </code> <code>/vless-grpc</code>
-<code>Expired On : </code> <code>$timer Minutes</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link TLS     :</code> 
 <code>${vless1}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link NTLS    :</code> 
 <code>${vless2}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link GRPC    :</code> 
 <code>${vless3}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
+<code>Expired On : </code> <code>$timer Minutes</code>
+<code>🔰@TazVPN</code>
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
