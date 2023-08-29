@@ -55,9 +55,9 @@ trojan1="$(echo $trojanlink1 | base64 -w 0)"
 trojan2="$(echo $trojanlink | base64 -w 0)"
 
 TEXT="
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>  Premium Trojan Account</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
 <code>Port TLS     : </code> <code>443</code>
@@ -68,14 +68,15 @@ TEXT="
 <code>Network      : WS or gRPC</code>
 <code>Path WS    : </code> <code>/trojan-ws</code>
 <code>Path GRPC  : </code> <code>/trojan-grpc</code>
-<code>Expired On : $exp</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link TLS    :</code> 
 <code>${trojan2}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link GRPC    :</code> 
 <code>${trojan1}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
+<code>Expired On : $exp</code>
+<code>🔰@TazVPN</code>
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
