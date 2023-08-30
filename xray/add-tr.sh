@@ -56,7 +56,7 @@ trojan2="$(echo $trojanlink | base64 -w 0)"
 
 TEXT="
 <code>◇═══════════════════◇</code>
-<code>  Premium Trojan Account</code>
+<code> 🔱 Premium Trojan Account 🔱</code>
 <code>◇═══════════════════◇</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
@@ -76,7 +76,7 @@ TEXT="
 <code>${trojan1}</code>
 <code>◇═══════════════════◇</code>
 <code>Expired On : $exp</code>
-<code>🔰@TazVPN</code>
+📡@TazVPN
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
