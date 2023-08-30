@@ -63,13 +63,12 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 clear
 TEXT="
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>  SSH Premium Account   </code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Username        : </code> <code>$Login</code>
 <code>Password        : </code> <code>$Pass</code>
-<code>Expired          : </code> <code>$exp</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>IP               : </code> <code>$IP</code>
 <code>Port OpenSSH    : </code> <code>22</code>
 <code>Port Dropbear    : </code> <code>109, 143</code>
@@ -77,18 +76,20 @@ TEXT="
 <code>Port SSH SSL WS : </code> <code>443</code>
 <code>Port SSL/TLS     : </code> <code>8443,8880</code>
 <code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>SSH UDP VIRAL :</code> <code>$domen:1-65535@$Login:$Pass</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>HTTP COSTUM :</code> <code>$domen:80@$Login:$Pass</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>Expired On   : $exp</code>
 <code>Host Slowdns    : </code> <code>$sldomain</code>
 <code>Port Slowdns     : </code> <code>80, 443, 53</code> 
 <code>Pub Key          : </code> <code> $slkey</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Payload WS/WSS   : </code>
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
+<code>Expired On   : $exp</code>
+📡@TazVPN
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
