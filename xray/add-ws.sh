@@ -103,9 +103,9 @@ systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 
 TEXT="
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>  Premium Vmess Account</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
+<code> 🔱 Premium Vmess Account 🔱</code>
+<code>◇═══════════════════◇</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
 <code>Port TLS     : </code> <code>443</code>
@@ -117,17 +117,18 @@ TEXT="
 <code>Network      : WS or gRPC</code>
 <code>Path         : </code> <code>/vmess</code>
 <code>ServiceName  : </code> <code>vmess-grpc</code>
-<code>Expired On   : $exp</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link TLS     :</code> 
 <code>${vmesslink1}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link NTLS    :</code> 
 <code>${vmesslink2}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
 <code>Link GRPC    :</code> 
 <code>${vmesslink3}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>◇═══════════════════◇</code>
+<code>Expired On   : $exp</code>
+📡@TazVPN
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
