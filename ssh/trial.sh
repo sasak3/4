@@ -14,12 +14,7 @@ CHATID=$(cat /etc/id)
 KEY=$(cat /etc/token)
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
-cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
-if [ "$cekray" = "XRAY" ]; then
 domen=`cat /etc/xray/domain`
-else
-domen=`cat /etc/v2ray/domain`
-fi
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
@@ -60,6 +55,7 @@ TEXT="
 <code>Expired          : </code> <code>$exp</code>
 <code>◇━━━━━━━━━━━━━━━━━◇</code>
 <code>IP               : </code> <code>$IP</code>
+<code>HOST            : </code> <code>$domen</code>
 <code>Port OpenSSH    : </code> <code>22</code>
 <code>Port Dropbear    : </code> <code>109, 143</code>
 <code>Port SSH WS     : </code> <code>80, 8080</code>
