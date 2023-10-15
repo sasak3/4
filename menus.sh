@@ -195,8 +195,8 @@ echo -e "       ─────────────────────�
  echo -e "          │ ${c} RAM     : $RAM Mb ${NC}"
  echo -e "          │ ${c} DATE    : $DATE${NC}"
  echo -e "          │ ${c} ISP     : $ISP ${NC}"
- echo -e "          │ ${c} User    : $username $a ${NC}"
- echo -e "          │ ${c} Xpired  : $exp ${NC}"
+ echo -e "          │ ${c} User    : $username${NC} $sts"
+ echo -e "          │ ${c} Xpired  : $exp$NC $r$certifacate${NC}Days"
  echo -e "          └──────────────────────────────────┘"  
 echo -e "                    ssh : $ssh1  vmess : $vma"
 echo -e "             shadow : $ssa  vless : $vla  trojan : $trb"
@@ -208,7 +208,7 @@ echo -e "       ${r}│ [${u}•4${y}]${NC} TROJAN-WS  "   "     ${y}[${u}•9${
 echo -e "       ${r}│ [${u}•5${y}]${NC} SHADOWSOCK "   "     ${y}[${u}10${y}]${NC} MENU SETTINGS"
 echo -e "       ${r}└─────────────────────────────────────────┘${NC}"
 echo -e "                          "
-echo -e "      ${w}             Version : 1.0.9 ${NC}"
+echo -e "      ${w}               Version : 2.0.9 ${NC}"
 echo -e "                  ${y}___${r}___${u}___${w}___${c}___${g}${NC}"
 echo -e   "${g}"
 read -p " select menu >>   "  opt
@@ -236,7 +236,7 @@ m-ssws
 ;;
 6 | 06)
 clear
-m-trial
+run
 ;;
 7 | 07)
 clear
