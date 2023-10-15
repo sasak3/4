@@ -33,10 +33,6 @@ LIGHT='\033[0;37m'
 grenbo="\e[92;1m"
 red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 # Getting
-export CHATID="1210833546"
-export KEY="6006599143:AAEgstCAioq35JgX97HaW_G3TAkLKzLZS_w"
-export TIME="10"
-export URL="https://api.telegram.org/bot$KEY/sendMessage"
 clear
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -46,7 +42,7 @@ clear
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip"
+data_ip="https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip"
 data_ip="https://abc.xcodehoster.com/izin"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
