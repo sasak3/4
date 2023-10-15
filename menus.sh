@@ -189,11 +189,11 @@ echo -e "       ─────────────────────�
 echo -e "        ${GB}              RIZYUL TUNNEL              ${NC}" 
 echo -e "       ───────────────────────────────────────────"
  echo -e "          ┌──────────────────────────────────┐"                   
- echo -e "          │ ${c} SYSTEM OS : $ISP ${NC}"
+ echo -e "          │ ${c} SYSTEM OS : $MODEL ${NC}"
  echo -e "          │ ${c} ISP VPS   : $ISP ${NC}"
  echo -e "          │ ${c} CPU       : $CORE CORE${NC}" 
  echo -e "          │ ${c} RAM       : $RAM Mb ${NC}"
- echo -e "          │ ${c} UPTIME    : $ISP ${NC}"
+ echo -e "          │ ${c} UPTIME    : $uptime ${NC}"
  echo -e "          │ ${c} IP VPS    : $IPVPS ${NC}"
  echo -e "          │ ${c} DOMAIN    : $domain ${NC}"
  echo -e "          │ ${c} DATE      : $DATE${NC}"
@@ -203,11 +203,11 @@ echo -e "       ─────────────────────�
 echo -e "                    ssh : $ssh1  vmess : $vma"
 echo -e "             shadow : $ssa  vless : $vla  trojan : $trb"
 echo -e "       ${r}┌─────────────────────────────────────────┐${NC}" 
-echo -e "       ${r}│ [${u}•1${y}]${NC} SSH & UDP  "   "     ${y}[${u}•6${y}]${NC} CHECK RUNNING"
-echo -e "       ${r}│ [${u}•2${y}]${NC} VMESS Xray "   "     ${y}[${u}•7${y}]${NC} RESTR SERVICE"  
-echo -e "       ${r}│ [${u}•3${y}]${NC} VLESS Xray "   "     ${y}[${u}•8${y}]${NC} BACKUP MENU  " 
-echo -e "       ${r}│ [${u}•4${y}]${NC} TROJAN-WS  "   "     ${y}[${u}•9${y}]${NC} CHANGE BANNER"
-echo -e "       ${r}│ [${u}•5${y}]${NC} SHADOWSOCK "   "     ${y}[${u}10${y}]${NC} MENU SETTINGS"
+echo -e "       ${r}│ [${u}•1${y}]${NC} SSH & UDP  "   "   ${y}[${u}•6${y}]${NC} CHECK RUNNING"
+echo -e "       ${r}│ [${u}•2${y}]${NC} VMESS Xray "   "   ${y}[${u}•7${y}]${NC} RESTR SERVICE"  
+echo -e "       ${r}│ [${u}•3${y}]${NC} VLESS Xray "   "   ${y}[${u}•8${y}]${NC} BACKUP MENU  " 
+echo -e "       ${r}│ [${u}•4${y}]${NC} TROJAN-WS  "   "   ${y}[${u}•9${y}]${NC} CHANGE BANNER"
+echo -e "       ${r}│ [${u}•5${y}]${NC} SHADOWSOCK "   "   ${y}[${u}10${y}]${NC} MENU SETTINGS"
 echo -e "       ${r}└─────────────────────────────────────────┘${NC}"
 echo -e "                          "
 echo -e "      ${w}               Version : 2.0.9 ${NC}"
@@ -242,7 +242,7 @@ run
 ;;
 7 | 07)
 clear
-gotop
+restart
 echo ""
 echo -e " ${GREEN} Back to menu in 1 sec ${NC}"
 sleep 1
@@ -250,7 +250,7 @@ menu
 ;;
 8 | 08)
 clear
-xp
+menu-backup
 echo ""
 echo -e " ${GREEN} Back to menu in 1 sec ${NC}"
 sleep 1
@@ -258,115 +258,14 @@ menu
 ;;
 9 | 09)
 clear
-autoreboot
+bot
 ;;
 10)
 clear
-prot
+setting
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
-;;
-11)
-clear
-speedtest
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
-;;
-12)
-clear
-run
-;;
-13)
-clear
-clearlog
-;;
-14)
-clear
-sd
-;;
-15)
-clear
-menu-backup
-;;
-16)
-clear
-reboot
-;;
-17)
-clear
-restart
-;;
-18)
-clear
-addhost
-;;
-19)
-clear
-fixcert
-;;
-20)
-clear
-echo -e "${green}ANDA YAKIN UNTUK MEMASANG SCRIPT INI ? $NC"
-echo -e "${green}MINIMAL RAM 2 GB BIAR DISK TIDAK FULL $NC"
-echo -e "${green}OS SUPPORT UBUNTU 20.04 ONLY $NC"
-echo -e ""
-read -p "SUDAH LAPOR KE ADMIN ? [Y/N]:" arg
-if [[ $arg == 'Y' ]]; then
-  echo -e "${Blue}Tindakan Diteruskan! $NC"
-  echo -e "${green}START. . . $NC"
-elif [[ $arg == 'y' ]]; then
-  echo -e "${Blue}Tindakan Diteruskan! $NC"
-  clear
-  echo -e "${Blue}START . . .$NC"
-elif [[ $arg == 'N' ]]; then
-  echo -e "${RED}Tindakan Dihentikan! $NC"
-  sleep 1
-  clear
-  menu
-  exit 0
-elif [[ $arg == 'n' ]]; then
-  echo -e "${RED}Tindakan Dihentikan! $NC"
-  sleep 1
-  clear
-  rm -f /root/update.sh
-  exit 0
-else
-  echo -e "${RED}Argumen Tidak Diketahui! $NC"
-  sleep 1
-  clear
-  rm -f /root/update.sh
-  exit 0
-fi
-##########
-clear
-wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
-;;
-21)
-clear
-clearcache
-;;
-22)
-clear
-bot
-;;
-23)
-clear
-echo -e "${green}ANDA YAKIN UNTUK UPDATE SCRIPT INI ? $NC"
-echo -e "${green}MINIMAL RAM 2 GB BIAR DISK TIDAK FULL $NC"
-echo -e "${green}OS SUPPORT UBUNTU 20.04 ONLY $NC"
-upsc
-;;
-24)
-clear
-load
-nano /etc/kyt.txt
-reboot
-;;
-0 | 00)
-figlet KYT PROJECT
-exit
 ;;
 x)
 menu
