@@ -272,7 +272,6 @@ netfilter-persistent reload
 cd /usr/bin
 # menu
 wget -O menu "https://raw.githubusercontent.com/sasak3/4/main/menu/menu.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/sasak3/4/main/menu/menu-vmess.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/sasak3/4/main/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/sasak3/4/main/menu/running.sh"
