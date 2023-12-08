@@ -303,29 +303,29 @@ wget -O port-change "https://raw.githubusercontent.com/sasak3/4/main/port/port-c
 wget -O certv2ray "https://raw.githubusercontent.com/sasak3/4/main/xray/certv2ray.sh"
 wget -O menu-webmin "https://raw.githubusercontent.com/sasak3/4/main/menu/menu-webmin.sh"
 wget -O speedtest "https://raw.githubusercontent.com/sasak3/4/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/auto-reboot.sh"
-wget -O restarts "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/restarts.sh"
-wget -O bw "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/menu/bw.sh"
+wget -O about "https://raw.githubusercontent.com/sasak3/4/main/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/sasak3/4/main/menu/auto-reboot.sh"
+wget -O restarts "https://raw.githubusercontent.com/sasak3/4/main/menu/restarts.sh"
+wget -O bw "https://raw.githubusercontent.com/sasak3/4/main/menu/bw.sh"
 
 
 # change port
-wget -O port-ssl "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/port/port-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/port/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/sasak3/4/main/port/port-ssl.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/sasak3/4/main/port/port-ovpn.sh"
 
 
-wget -O xp "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/xp.sh"
-wget -O acs-set "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/acs-set.sh"
+wget -O xp "https://raw.githubusercontent.com/sasak3/4/main/ssh/xp.sh"
+wget -O acs-set "https://raw.githubusercontent.com/sasak3/4/main/acs-set.sh"
 
-wget -O sshws "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/ssh/sshws.sh"
-wget -O status "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/status.sh"
-wget -O menu-backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/menu-backup.sh"
-wget -O backup "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/backup/restore.sh"
-wget -O bot "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh"
+wget -O sshws "https://raw.githubusercontent.com/sasak3/4/main/ssh/sshws.sh"
+wget -O status "https://raw.githubusercontent.com/sasak3/4/main/status.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/sasak3/4/main/backup/menu-backup.sh"
+wget -O backup "https://raw.githubusercontent.com/sasak3/4/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/sasak3/4/main/backup/restore.sh"
+wget -O bot "https://raw.githubusercontent.com/sasak3/4/main/bot.sh"
 
-wget -O jam "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/jam.sh"
-wget -O up "https://raw.githubusercontent.com/SETANTAZVPN/v4/main/up.sh"
+wget -O jam "https://raw.githubusercontent.com/sasak3/4/main/jam.sh"
+wget -O up "https://raw.githubusercontent.com/sasak3/4/main/up.sh"
 
 chmod +x menu
 chmod +x menu-trial
