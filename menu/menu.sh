@@ -2,7 +2,7 @@
 ipsaya=$(curl -sS ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini"
+data_ip="https://raw.githubusercontent.com/sasak3/4/main/mini"
 checking_sc() {
     useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
     if [[ $date_list < $useexp ]]; then
@@ -22,7 +22,7 @@ checking_sc() {
     fi
 }
 checking_sc
-Name=$(curl -sS https://raw.githubusercontent.com/SETANTAZVPN/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/sasak3/4/main/mini | grep $ipsaya | awk '{print $2}')
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
@@ -38,7 +38,7 @@ let ssa=$ssx/2
 if [[ -e /usr/bin/bot ]]; then
 echo -ne
 else
-wget -O /usr/bin/bot https://raw.githubusercontent.com/SETANTAZVPN/v4/main/bot.sh && chmod +x /usr/bin/bot
+wget -O /usr/bin/bot https://raw.githubusercontent.com/sasak3/4/main/bot.sh && chmod +x /usr/bin/bot
 fi
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 # // Exporting Language to UTF-8
