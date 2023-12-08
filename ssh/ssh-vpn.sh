@@ -321,6 +321,7 @@ wget -O status "https://raw.githubusercontent.com/sasak3/4/main/status.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/sasak3/4/main/backup/menu-backup.sh"
 wget -O backup "https://raw.githubusercontent.com/sasak3/4/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/sasak3/4/main/backup/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/sasak3/4/main/backup/strt.sh"
 wget -O bot "https://raw.githubusercontent.com/sasak3/4/main/bot.sh"
 
 wget -O jam "https://raw.githubusercontent.com/sasak3/4/main/jam.sh"
@@ -372,6 +373,7 @@ chmod +x status
 chmod +x menu-backup
 chmod +x backup
 chmod +x restore
+chmod +x strt
 chmod +x jam
 cd
 
